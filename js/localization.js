@@ -43,7 +43,7 @@ String.toLocaleString({
     '%8'                    : 'brigadiere generale',
     '%9'                    : 'maggiore generale',
     '%10'                   : 'tenente generale',
-    '%11'                   : 'general'
+    '%11'                   : 'generale'
 	}
 
 });

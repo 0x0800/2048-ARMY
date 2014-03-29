@@ -24,6 +24,24 @@ $game-container-background: #3E4D33;
 
 $transition-speed: 100ms;
 
+$base: 2;
+$limit: 11;
+
+// Colors for all 11 states, false = no special color
+$special-colors: false false, // 2
+                 false false, // 4
+                 #30770A true, // 8
+                 #458F08 true, // 16
+                 #599408 true, // 32
+                 #73C00B true, // 64
+                 false true, // 128
+                 false true, // 256
+                 false true, // 512
+                 false true, // 1024
+                 false true; // 2048
+
+$title-container-size: 30px;
+
 html, body {
   margin: 0;
   padding: 0;
@@ -50,28 +68,28 @@ h1.title {
   font-weight: bold;
   margin: 0;
   display: block;
-  float: left;  
+  float: left;
+  
+  &:after {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      text-transform: uppercase;
+      font-size: $title-container-size;
+      line-height: $title-container-size;
+      text-align: center;
+      font-weight: bold;
+      content: "Army";
+  }
 }
 
 .title-container {
-    $title-container-size: 30px;
     
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
-    
-    &:after {
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-        left: 0;
-        text-transform: uppercase;
-        font-size: $title-container-size;
-        line-height: $title-container-size;
-        text-align: center;
-        font-weight: bold;
-        content: "Army";
-    }
+
 }
 
 @include keyframes(move-up) {
@@ -365,22 +383,7 @@ hr {
   -moz-transition-property: -moz-transform;
   transition-property: transform;
 
-  $base: 2;
   $exponent: 1;
-  $limit: 11;
-
-  // Colors for all 11 states, false = no special color
-  $special-colors: false false, // 2
-                   false false, // 4
-                   #30770A true, // 8
-                   #458F08 true, // 16
-                   #599408 true, // 32
-                   #73C00B true, // 64
-                   false true, // 128
-                   false true, // 256
-                   false true, // 512
-                   false true, // 1024
-                   false true; // 2048
 
   // Build tile colors
   @while $exponent <= $limit {
@@ -634,22 +637,7 @@ hr {
   background: rgba($tile-color, .35);
 }
 
-$base: 2;
 $exponent: 1;
-$limit: 11;
-
-// Colors for all 11 states, false = no special color
-$special-colors: false false, // 2
-                 false false, // 4
-                 #30770A true, // 8
-                 #458F08 true, // 16
-                 #599408 true, // 32
-                 #73C00B true, // 64
-                 false true, // 128
-                 false true, // 256
-                 false true, // 512
-                 false true, // 1024
-                 false true; // 2048
 
 // Build tile colors
 @while $exponent <= $limit {

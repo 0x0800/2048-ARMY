@@ -336,6 +336,9 @@ hr {
     font-weight: bold;
     z-index: 10;
     font-size: 55px; }
+    .tile .tile-inner img {
+      width: 100%;
+      height: 100%; }
   .tile.tile-2 .tile-inner {
     background: #1b2813;
     box-shadow: 0 0 30px 10px rgba(79, 242, 53, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
@@ -777,6 +780,9 @@ hr {
   float: left;
   border-radius: 3px;
   background: rgba(27, 40, 19, 0.35); }
+  .legend-cell img {
+    width: 100%;
+    height: 100%; }
 
 .cell-2 {
   background: #1b2813;
